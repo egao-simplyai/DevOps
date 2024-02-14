@@ -14,6 +14,7 @@ ctx = snowflake.connector.connect(
 cs = ctx.cursor()
 try:
     cs.execute("SELECT current_version()")
+    cs.execute("SELECT 'TESTING!!!!' ")
     one_row = cs.fetchone()
     print(one_row[0])
 finally:
